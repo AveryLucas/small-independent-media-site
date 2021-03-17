@@ -37,7 +37,12 @@ class ArticleLink extends React.Component {
             return (
               <div
                 className="article-arrow-container"
-                style={{ position: "absolute", top: 0, left: "-28px" }}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: "-28px",
+                  paddingTop: "10px",
+                }}
               >
                 {this.renderRightArrow()}
               </div>
