@@ -3,9 +3,9 @@ const Post = require("../models/postModel");
 
 router.post("/", async (req, res) => {
   // Get data from request
-  const { title, subTitle, tags, content } = req.body;
+  const { title, subTitle, description, content } = req.body;
   // Create new post model
-  const newPost = new Post({ title, subTitle, tags, content });
+  const newPost = new Post({ title, subTitle, description, content });
   // Attempt to save post to database
   try {
     const savedPost = await newPost.save();
