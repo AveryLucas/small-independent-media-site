@@ -29,11 +29,13 @@ class ArticleLink extends React.Component {
   };
 
   render() {
+    const { data, renderArrow } = this.props;
+    const { title, subTitle, description } = data;
     return (
       <div className="article-link" style={{ position: "relative" }}>
         {/* <div className="article-image-preview" /> */}
         {(() => {
-          if (this.props.renderArrow) {
+          if (renderArrow) {
             return (
               <div
                 className="article-arrow-container"
@@ -50,30 +52,18 @@ class ArticleLink extends React.Component {
           }
         })()}
         {(() => {
-          if (this.props.title) {
-            return (
-              <h3 className="article-title">
-                {generate(Math.round(Math.random() * 50 + 25))}
-              </h3>
-            );
+          if (title) {
+            return <h3 className="article-title">{title}</h3>;
           }
         })()}
         {(() => {
-          if (this.props.subTitle) {
-            return (
-              <p className="article-sub-title">
-                {generate(Math.round(Math.random() * 25 + 25))}
-              </p>
-            );
+          if (subTitle) {
+            return <p className="article-sub-title">{subTitle}</p>;
           }
         })()}
         {(() => {
-          if (this.props.description) {
-            return (
-              <p className="article-description">
-                {generate(Math.round(Math.random() * 100 + 25))}
-              </p>
-            );
+          if (description) {
+            return <p className="article-description">{description}</p>;
           }
         })()}
       </div>
