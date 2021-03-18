@@ -3,14 +3,15 @@ const Post = require("../models/postModel");
 
 router.post("/", async (req, res) => {
   // Get data from request
-  const { title, subTitle, description, content } = req.body;
+  const { title, subTitle, description, markdown } = req.body;
   // Create new post model
-  const newPost = new Post({ title, subTitle, description, content });
+  const newPost = new Post({ title, subTitle, description, markdown });
   // Attempt to save post to database
   try {
     const savedPost = await newPost.save();
     res.json(savedPost);
   } catch (err) {
+    res.json({ error: err.message }).status(400);
     console.error(err);
   }
 });
