@@ -30,9 +30,13 @@ class ArticleLink extends React.Component {
 
   render() {
     const { data, renderArrow } = this.props;
-    const { title, subTitle, description } = data;
+    const { title, subTitle, description, _id } = data;
     return (
-      <div className="article-link" style={{ position: "relative" }}>
+      <a
+        className="article-link"
+        href={`/${_id}`}
+        style={{ position: "relative" }}
+      >
         {/* <div className="article-image-preview" /> */}
         {(() => {
           if (renderArrow) {
@@ -66,7 +70,7 @@ class ArticleLink extends React.Component {
             return <p className="article-description">{description}</p>;
           }
         })()}
-      </div>
+      </a>
     );
   }
 }

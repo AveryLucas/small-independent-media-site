@@ -29,12 +29,12 @@ aside>:last-child {
   margin-bottom: 0;
 }
 
-.main-container {
-  /* max-width: 700px; */
-  max-width: 625px;
+.container {
+  max-width: 700px;
+  /* max-width: 600px; */
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .main-container>h2 {
@@ -48,6 +48,7 @@ aside>:last-child {
   /* margin: 10px; */
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   /* margin-top: 15px; */
   max-width: 400px;
   width: 100%;
@@ -57,7 +58,7 @@ aside>:last-child {
 
 .article-link:hover {
   cursor: pointer;
-  background: rgb(24 0 82 / 6%);
+  /* background: rgb(24 0 82 / 6%); */
 }
 
 .article-link:hover h3, #post-slider-auto-items-list>.article-link:hover h3 {
@@ -124,7 +125,7 @@ aside>:last-child {
 
 #article-list>.article-link {
   justify-items: right;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 #article-list>.article-link:first-child {
